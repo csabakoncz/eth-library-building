@@ -1,0 +1,1 @@
+exports['ethjs'] = require('ethjs')
