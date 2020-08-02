@@ -1,6 +1,9 @@
 var ethUtil = window['ethereumjsUtil']['ethereumjs-util']
 var sigUtil = window['ethSigUtil']['eth-sig-util']
 var Eth = window['ethjs']['ethjs']
+
+var Buffer = buffer.Buffer //not needed when bundled with Browserify https://github.com/feross/buffer
+
 window.Eth = Eth
 console.log('new V2')
 //var fs = require('fs')
