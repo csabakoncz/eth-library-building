@@ -3,4 +3,9 @@ ports:
 
 tasks:
 - init: ./build-all.sh
-- command: python3 -m http.server 8080; echo "Browserify version $(gp url 8080)/br"; echo "Webpack $(gp url 8080)/wp"
+- command: python3 -m http.server 8080
+- command:  gp await-port 8080 &&
+            echo "Browserify version at $(gp url 8080)/br" && 
+            echo "Webpack version at $(gp url 8080)/wp" &&
+            echo "Opening Webpack version in preview" && 
+            gp preview $(gp url 8080)/wp
